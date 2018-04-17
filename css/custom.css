@@ -1800,6 +1800,7 @@ section#quotes {
   background-attachment: fixed;
   background-size: cover;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.298);
+  transition: 2s ease;
 }
 
 section#quotes h4 {
@@ -1853,7 +1854,7 @@ footer p {
 
 footer .copyright p {
   color: #fff !important;
-  font-size: 12px; 
+  font-size: 12px;
   letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: bold;
@@ -3636,7 +3637,7 @@ fieldset[disabled] .btn.cta.btn-info.active {
   line-height: 1.5em;
   margin-top: 4em;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.66);
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .home.fullscreen #intro .intro-copy h1 span {
@@ -4222,9 +4223,10 @@ td {
 #datatab tbody tr {
   transition: 0.8s ease-out 0s;
 }
+
 #datatab tbody tr:hover,
 #mobile-datatab tbody tr:hover {
-  background-image: linear-gradient(to right,rgba(190,149,152,0.00) 0%, rgba(170,134,136,0.3) 50%,rgba(190,149,152,0.00) 100%);
+  background-image: linear-gradient(to right, rgba(190, 149, 152, 0.00) 0%, rgba(170, 134, 136, 0.3) 50%, rgba(190, 149, 152, 0.00) 100%);
   color: #fff !important;
 }
 
@@ -4271,30 +4273,31 @@ td.contdata {
   margin-top: 0.5em;
 }
 
-#about-1 label, #about-2 label:not(.checkbox-custom-label) {
+#about-1 label,
+#about-2 label:not(.checkbox-custom-label) {
   margin-bottom: 1.5em;
   margin-top: 2.1em;
 }
 
 #about-1 {
   /* sbackground: linear-gradient(to left, #cdcdcd 1%, #ffffff 89%); */
-  background: linear-gradient(to bottom, rgba(31,29,29,1) 0%,rgba(14,13,12,1) 100%);
+  background: linear-gradient(to bottom, rgba(31, 29, 29, 1) 0%, rgba(14, 13, 12, 1) 100%);
 }
 
 #about-2 {
-  background: linear-gradient(to bottom, rgba(14,13,12,1) 0%,rgba(31,29,29,1) 100%);
+  background: linear-gradient(to bottom, rgba(14, 13, 12, 1) 0%, rgba(31, 29, 29, 1) 100%);
   padding-top: 0px;
 }
 
 .about-2-timeheader {
   margin-left: 0;
-    margin-top: 43px;
-    display: block;
-    font-size: 22px;
+  margin-top: 43px;
+  display: block;
+  font-size: 22px;
 }
 
 .about-2-timeheader {
-   margin-top: 2em;
+  margin-top: 2em;
 }
 
 #about-2 .col-md-12 h3 {
@@ -4569,23 +4572,23 @@ input#partapi {
 }
 
 .surenotnow a:hover {
-  color: #774747!important;
+  color: #774747 !important;
   text-decoration: none !important;
 }
 
-.surenotnow:hover  {
+.surenotnow:hover {
   color: #774747 !important;
   text-decoration: none !important;
   background: #be9598;
 }
 
 #sure {
-   margin-left: 29%;
+  margin-left: 29%;
 }
 
 #not-now {
-    color: #774747 !important;
-    border-color: #774747;
+  color: #774747 !important;
+  border-color: #774747;
 }
 
 #datatab th {
@@ -4593,7 +4596,7 @@ input#partapi {
 }
 
 #datatab thead tr:nth-child(1) {
-   padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .fold-table {
@@ -5053,8 +5056,9 @@ div#db-data-access {
   line-height: 20px;
 }
 
-.greating, #great-msg {
- font-size: 32px;
+.greating,
+#great-msg {
+  font-size: 32px;
 }
 
 #top-bar {
@@ -5075,11 +5079,19 @@ div#db-data-access {
   opacity: 0;
   margin-top: 8em;
   transform: translate3d(0px, 20px, 0);
-  transition: 1s ease-out 1.5s;
+  transition: opacity 1s ease-out 1.5s, transform 1s east-out 1.5s;
+  display: none;
 }
 
-.thanksAreSaid h2, .thanksAreSaid h2.qk {
-  font-size: calc(2vh + 9em); /* nifty way to deal with this ? */
+.thanksAreSaid h2,
+.thanksAreSaid h2.qk {
+  font-size: calc(2vh + 9em);
+  /* nifty way to deal with this ? */
   margin-top: calc(0.5vh + 1em);
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.45);
 }
+
+/* .section h1 {
+  text-align: center !important;
+  margin-bottom: 51px !important;
+} */

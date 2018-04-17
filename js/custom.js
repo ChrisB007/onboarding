@@ -21,6 +21,21 @@ var email       = "info@weareblkbox.com";
 
 var topBarToBeSeen = document.querySelector('#top-bar');
 
+// var thanksWaypoint = new Waypoint({
+//   element: document.querySelector('.thanksAreSaid'),
+//   handler: function(direction) {
+//     if (direction === "down") {
+//       console.log(direction);
+//       topBarToBeSeen.style.cssText = "opacity: 0";
+//     }
+//     if (direction === "up") {
+//      console.log(direction);
+//      topBarToBeSeen.style.cssText = "opacity: 1";
+//    }
+//   },
+//   offset: '-50%'
+// });
+
 var navWaypoint = new Waypoint({
     element: document.querySelector('#features'),
     handler: function(direction) {
@@ -35,6 +50,7 @@ var navWaypoint = new Waypoint({
     },
     offset: '15%'
 });
+
 
 
 /*Form address*/
@@ -72,10 +88,15 @@ $(function () {
           }
         );
         $(".thanksAreSaid").css({
+           'display' : 'block',
            'opacity' : '1',
            'transform' : 'translate3d(0, 0px, 0)'
            }
          );
+        //  $("#top-bar").css({
+        //    'transition' : '2s ease-out',
+        //    'opacity' : '0'
+        //  });
         e.preventDefault()
         //debugger;//
         $('html, body').animate({

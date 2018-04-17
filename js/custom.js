@@ -17,7 +17,24 @@ var email       = "info@weareblkbox.com";
 //    |  |  |  |  |  |  |  |  |  |  |  |
 //    |  |  |  |  |  |  |  |  |  |  |  |
 
+/* Dear Waypoints */
 
+var topBarToBeSeen = document.querySelector('#top-bar');
+
+var navWaypoint = new Waypoint({
+    element: document.querySelector('#features'),
+    handler: function(direction) {
+       if (direction === "down") {
+        //  console.log(direction);
+         topBarToBeSeen.style.cssText = "opacity: 1";
+       }
+       else if (direction === "up") {
+        //  console.log(direction);
+         topBarToBeSeen.style.cssText = "opacity: 0";
+       }
+    },
+    offset: '15%'
+});
 
 
 /*Form address*/
@@ -47,6 +64,18 @@ $(function () {
     })
     //debugger;//
     $("#form-submit2").on('click', function (e) {
+        // $("#quotes").css('height', '100vh');
+        $("#quotes").css(
+          {
+            'height' : '100vh',
+            'background-image' : 'url(../img/firstTY-01.jpg)'
+          }
+        );
+        $(".thanksAreSaid").css({
+           'opacity' : '1',
+           'transform' : 'translate3d(0, 0px, 0)'
+           }
+         );
         e.preventDefault()
         //debugger;//
         $('html, body').animate({
@@ -107,14 +136,19 @@ $(function () {
         }
     });
     $("#sure").click(function () {
-        $("#hidden-form").show('slow');
+        $("#hidden-form").show('fast');
+        $("#about-2").css('padding-top', '1em');
+        $('html, body').animate({
+          scrollTop: $("#hidden-form").offset().top
+      }, 1000);
     });
     $("#not-now").click(function () {
         $("#hidden-form").hide('fast');
         setTimeout(function () {
             $('html, body').animate({
                 scrollTop: $("#about-2").offset().top
-            }, 2000);
+            }, 1000);
+            $("#about-2").css('padding-top', '8em');
         }, 200);
     });
     var sheet = document.createElement('style'),

@@ -9,8 +9,8 @@
     <meta charset="utf-8">
     <title>Quantum Client Onboarding</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,">
-    <meta name="description" content=". ">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
     <meta name="author" content="">
 
 
@@ -83,7 +83,7 @@
                             <h1>
                                 <span>Welcome</span>
                                 <br>
-                                <em class="glad_here">We're glad you're here 👋</em>
+                                <em class="glad_here">We're glad you're here <em class="waveHi">👋</em></em>
                             </h1>
                             <p id="onb">This onboarding process takes
                                 <span class="numHighlight">3</span> easy steps:</p>
@@ -120,18 +120,18 @@
 
                             <form class="col-md-12">
                                 <h3>
-                                    <span style="margin-left: 0">Your Company</span>
+                                    <span style="margin-left: 0">Your Company </span>
                                 </h3>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Company Name: </label>
+                                        <label>Company Name <span class="punctEmph">:</span></label>
                                         <div>
                                             <input type="text" name="company" class="col-md-12 col-xs-12" placeholder="Company Name">
                                         </div>
                                     </div>
                                     <div>
                                         <div class="col-md-6">
-                                            <label>Website: &nbsp;</label>
+                                            <label>Website <span class="punctEmph">:</span> &nbsp;</label>
                                             <input type="text" name="adress1" class="col-md-12 col-xs-12" placeholder="http://">
                                         </div>
                                     </div>
@@ -139,19 +139,19 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-5">
-                                        <label>Main Address</label>
+                                        <label>Main Address <span class="punctEmph">:</span></label>
                                         <input type="text" name="adress2" placeholder='1233 Broadway' id="form-address" class="col-md-12 form-control">
                                     </div>
                                     <div class="col-md-2">
-                                        <label>City:</label>
+                                        <label>City <span class="punctEmph">:</span></label>
                                         <input type="text" name="city" id="form-city" class="col-md-12 form-control" placeholder="City">
                                     </div>
                                     <div class="col-md-2">
-                                        <label>State: &nbsp;</label>
+                                        <label>State <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="state" id="form-state" class="col-md-12 form-control" placeholder="State">
                                     </div>
                                     <div class="col-md-3">
-                                        <label>Zip code: &nbsp;</label>
+                                        <label>Zip code <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="zipcode" id="form-zip" class="col-md-12 form-control" placeholder="Zip code">
                                     </div>
                                 </div>
@@ -164,31 +164,31 @@
                                 </h3>
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <label>Your Name: &nbsp;</label>
+                                        <label>Your Name <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="firstname_lastname" class="col-md-12 col-xs-12" placeholder="John Doe">
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Your Email: &nbsp;</label>
+                                        <label>Your Email <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="email" size="35" placeholder="me@mycompany.com" class="col-md-12 col-xs-12">
                                     </div>
                                     <div class="col-md-4">
-                                        <label>Your Phone: &nbsp;</label>
+                                        <label>Your Phone <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="phone" placeholder="123-345-5678" class="col-md-12 col-xs-12">
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>User ID: &nbsp;</label>
+                                        <label>User ID <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="userid" class="col-md-12 col-xs-12">
                                     </div>
 
                                     <div class="col-md-3">
-                                        <label>Password: &nbsp;</label>
+                                        <label>Password <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="password" name="password1" placeholder="******" class="col-md-12 col-xs-12">
                                     </div>
                                     <div class="col-md-3">
-                                        <label>Confirm: </label>
+                                        <label>Confirm <span class="punctEmph">:</span> </label>
                                         <input type="password" name="password2" placeholder="******" class="col-md-12 col-xs-12">
                                     </div>
 
@@ -196,11 +196,11 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Your Brand: &nbsp;</label>
+                                        <label>Your Brand <span class="punctEmph">:</span> &nbsp;</label>
                                         <input type="text" name="brand" class="col-md-12 col-xs-12" placeholder="Brand number one ">
                                     </div>
                                     <div class="col-md-6">
-                                        <label>Your Role: &nbsp;</label>
+                                        <label>Your Role <span class="punctEmph">:</span> &nbsp;</label>
                                         <select id="id_role" name="role" class="col-md-12 col-xs-12">
                                             <option value="">Select a Role</option>
                                             <option value="Brand Manager">Brand Manager</option>
@@ -426,7 +426,7 @@
                                     <input type="checkbox" name="learning" class="checkbox-custom " value="Other" id="checkbox-6">
                                     <label for="checkbox-6" class="checkbox-custom-label ">Other</label>
                                     <br>
-                                    <textarea id="othertext" placeholder="Please specify" style="width: 64%; height: 75px; margin-top: 6px; margin-left: 3px;">
+                                    <textarea id="othertext" placeholder="Please specify" style="width: 99.5%; height: 72px; margin-top: 6px; margin-left: 8px;">
                                     </textarea>
                                 </div>
                                 <br>

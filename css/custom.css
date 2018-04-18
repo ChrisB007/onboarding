@@ -1791,6 +1791,14 @@ section#features p {
   font-weight: 300;
 }
 
+section#features label {
+  font-weight: bold !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 1.05em;
+}
+
 section#quotes {
   padding: 3em 0;
   /* background: url(../img/firstBK-01.jpg); */
@@ -1839,6 +1847,7 @@ section#about {}
 footer {
   padding: 2em 0;
   /* background: #000000; */
+  background: transparent !important;
 }
 
 footer.sticky {
@@ -3801,9 +3810,6 @@ fieldset[disabled] .btn.cta.btn-info.active {
   .logo {
     font-size: 1.5em;
   }
-  section#intro h1 {
-    font-size: 3.2em;
-  }
   section#intro p {
     font-size: 1.5em;
   }
@@ -3824,8 +3830,8 @@ fieldset[disabled] .btn.cta.btn-info.active {
     line-height: 1.2em;
   }
   .home.fullscreen #intro .intro-copy p {
-    font-size: 1.5em;
-    color: white;
+    font-size: 1em;
+    color: rgb(215, 215, 215)
   }
   .focus-area {
     padding: 0 2%;
@@ -4275,8 +4281,9 @@ td.contdata {
 
 #about-1 label,
 #about-2 label:not(.checkbox-custom-label) {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   margin-top: 2.1em;
+  font-size: 1.11em;
 }
 
 #about-1 {
@@ -4287,6 +4294,10 @@ td.contdata {
 #about-2 {
   background: linear-gradient(to bottom, rgba(14, 13, 12, 1) 0%, rgba(31, 29, 29, 1) 100%);
   padding-top: 0px;
+}
+
+#about-2 .col-md-8 .row .col-md-12 {
+  margin-left: -2px;
 }
 
 .about-2-timeheader {
@@ -4547,6 +4558,7 @@ input#partapi {
 #inpfile {
   margin: 3px;
   padding-left: 29px;
+  color: #fff;
 }
 
 .mod {
@@ -4751,14 +4763,15 @@ h3#marginbest {
   display: none;
   width: 50%;
   height: auto;
-  background: #f24d35;
+  /* background: #f24d35; */
   margin: auto;
-  border-bottom-left-radius: 8px;
-  border-top-right-radius: 8px;
+  /* border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px; */
+  margin-top: 68px;
 }
 
 #contact_slidein p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #ffffff;
   text-align: center;
   padding: 5px;
@@ -4767,6 +4780,12 @@ h3#marginbest {
 #contact_slidein form {
   margin: auto;
   padding: 0 0 15px 30px;
+}
+
+#contact_slidein label {}
+
+#contact_slidein .col-xs-12 label {
+  margin-top: 25px;
 }
 
 div#db-data-access {
@@ -4843,7 +4862,7 @@ div#db-data-access {
     line-height: 1.2em;
   }
   .home.fullscreen #intro .intro-copy p {
-    font-size: 1.5em;
+    font-size: 1em;
     color: white;
     margin-bottom: 0.5em;
   }
@@ -4974,6 +4993,7 @@ div#db-data-access {
   border: 2px solid #e45c31;
   font-weight: bold;
   font-style: normal;
+  font-size: 32px;
   color: #ffeee9;
   padding: 2px 0;
   display: inline-block;
@@ -5026,6 +5046,70 @@ div#db-data-access {
   width: 900px;
   margin: auto;
   height: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .contain_steps {
+    margin: auto;
+    height: 100%;
+    width: 100vw;
+  }
+  .step1i,
+  .step2i,
+  .step3i {
+    width: 100% !important;
+    font-weight: bold;
+  }
+  .box {
+    display: block;
+    float: none;
+  }
+  .steps_3 {
+    height: 100% !important;
+    margin-top: 18px;
+    padding-top: 4vh;
+  }
+  .waveHi {
+    font-size: 13vw;
+    font-style: normal !important;
+    display: inline-block;
+    margin-top: 0.4em;
+  }
+  #features .numHighlight,
+  .col-lg-12 h1 .numHighlight {
+    transform: scale(0.75);
+  }
+  .glad_here {
+    font-size: 0.8em;
+  }
+  section#features h1,
+  h1 {
+    text-align: center;
+  }
+  section#features label {
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-bottom: 1.05em;
+    margin-top: 2em;
+  }
+
+  #formdata h3,
+  #formdata h4 {
+    color: #fff;
+    text-align: center !important;
+  }
+
+  #formdata .fold-table, #formdata .fold-table td, #formdata .fold-table th {
+    color: #fff;
+    border: 1px solid transparent;  
+  }
+
+  .fold-table tr:nth-child(4) td:nth-child(2), .fold-table tr:nth-child(8) td:nth-child(2), .fold-table tr:nth-child(16) td:nth-child(2) {
+    margin-bottom: 100px;
+    display: block;
+  }
 }
 
 .table {
@@ -5095,3 +5179,80 @@ div#db-data-access {
   text-align: center !important;
   margin-bottom: 51px !important;
 } */
+
+.form-control {
+  height: 100%;
+}
+
+.modal-content {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.89) 0%, rgba(0, 11, 12, 0.85) 100%) !important;
+}
+
+h4.modal-title {
+  margin-top: 0 !important;
+  background: transparent !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  font-weight: normal;
+  padding: 10px 0 !important;
+  letter-spacing: 7px;
+  color: #fff;
+  box-shadow: none !important;
+}
+
+.modal-content .btn {
+  padding: 9px 20px 8px;
+  border: none;
+  background-image: none;
+  color: white;
+  text-decoration: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  transition: 0.25s;
+  font-weight: bold;
+  background: #29b8b4 !important;
+  position: relative;
+  right: 20px;
+  width: 70px;
+  height: 60px;
+  top: -9px;
+}
+
+.modal-content .btn:hover {
+  color: #006d63;
+  background: #76cfd5 !important;
+}
+
+.modal-body .row {
+  margin-bottom: 13px;
+}
+
+.close {
+  text-shadow: none;
+  color: #fff !important;
+}
+
+.punctEmph {
+  color: #1ff797;
+  font-size: 1.3em;
+  position: relative;
+  top: -1px;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px #07E888;
+}
+
+.checkbox-custom-label {
+  padding: 5px !important;
+}
+
+.radio-custom-label {
+  outline: none !important;
+}
+
+.waveHi {
+  font-style: normal !important;
+  display: inline-block;
+}

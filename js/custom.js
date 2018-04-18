@@ -55,6 +55,9 @@ var navWaypoint = new Waypoint({
 
 /*Form address*/
 
+$('.close').click(function() {
+  console.log('someone tried to close this. they could not.')
+});
 
 /*Submit btn*/
 $(function () {

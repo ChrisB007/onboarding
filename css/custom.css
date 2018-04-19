@@ -1768,6 +1768,7 @@ section#featured p {
 section#features {
   padding-bottom: 6em;
   /*border-bottom: 4px solid #233140;*/
+  box-shadow: -1px -20px 190px 107px #1f1d1d;
 }
 
 section#features h1,
@@ -1806,9 +1807,18 @@ section#quotes {
   text-align: center !important;
   /* height: 0; */
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 190%;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.298);
-  transition: 2s ease;
+  /* transition: 2s ease; */
+}
+
+@keyframes backMover {
+  0% {
+    background-size: 190%
+  }
+  100% {
+    background-size: 120%
+  }
 }
 
 section#quotes h4 {
@@ -5155,7 +5165,8 @@ div#db-data-access {
   z-index: 100;
   opacity: 0;
   box-shadow: 0 0 10px rgba(16, 14, 14, 0.8705882352941177);
-  transition: 0.3s ease-out;
+  transition: 2s ease-out;
+  transform: translate3d(0, 0, 0);
 }
 
 .thanksAreSaid {
@@ -5255,4 +5266,26 @@ h4.modal-title {
 .waveHi {
   font-style: normal !important;
   display: inline-block;
+}
+
+.scrollDown {
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  font-size: 3em !important;
+  left: 50%;
+  z-index: 2;
+  transform: translate3d(-50%, 0, 0) scale(1.5);
+  transition: 0.5s ease;
+}
+
+.scrollWords {
+  font-size: 0.2em;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: -54px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }

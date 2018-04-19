@@ -20,6 +20,7 @@ var email       = "info@weareblkbox.com";
 /* Dear Waypoints */
 
 var topBarToBeSeen = document.querySelector('#top-bar');
+var glowArrow = document.querySelector('.scrollDown');
 
 // var thanksWaypoint = new Waypoint({
 //   element: document.querySelector('.thanksAreSaid'),
@@ -42,14 +43,68 @@ var navWaypoint = new Waypoint({
        if (direction === "down") {
         //  console.log(direction);
          topBarToBeSeen.style.cssText = "opacity: 1";
+         glowArrow.style.cssText = "opacity: 0"
        }
        else if (direction === "up") {
         //  console.log(direction);
          topBarToBeSeen.style.cssText = "opacity: 0";
+         glowArrow.style.cssText = "opacity: 1; text-shadow: 0 0 25px #fff; transform: translate3d(-50%, 10%, 0) scale(1.8);"
        }
     },
-    offset: '15%'
+    offset: '17%'
 });
+
+var learningWaypoint = new Waypoint({
+    element: document.querySelector('#about-2'),
+    handler: function(direction) {
+      if (direction === "down") {
+        topBarToBeSeen.style.cssText = "background-position-x: -182px; opacity: 1; transition: 4s cubic-bezier(.25,.5,.4,.99)";
+      }
+      else if (direction === "up") {
+        topBarToBeSeen.style.cssText = "background-position-x: 0px; opacity: 1; transition: 4s cubic-bezier(.25,.5,.4,.99)";
+      }
+    },
+    offset: '25%'
+});
+
+var dataWaypoint = new Waypoint({
+  element: document.querySelector('#formdata'),
+  handler: function(direction) {
+    if (direction === "down") {
+      topBarToBeSeen.style.cssText = "background-position-x: -300px; opacity: 1; transition: 4s cubic-bezier(.25,.5,.4,.99)";
+    }
+    else if (direction === "up") {
+      topBarToBeSeen.style.cssText = "background-position-x: -182px; opacity: 1; transition: 4s cubic-bezier(.25,.5,.4,.99)";
+    }
+  },
+  offset: '24%'
+});
+
+var glowArrowWaypoint = new Waypoint({
+   element: document.querySelector('#intro'),
+   handler: function(direction) {
+     if(direction === "down") {
+      glowArrow.style.cssText = "text-shadow: 0 0 25px #fff; transform: translate3d(-50%, 10%, 0) scale(1.8);"
+     }
+     else if(direction === "up") {
+      glowArrow.style.cssText = "text-shadow: 0 0 0px #fff; transform: translate3d(-50%, 10%, 0) scale(1.5);"
+     }
+   },
+   offset: '-1.2%'
+})
+
+
+// scroll arrow glow 
+// $(window).scroll(function() {
+//   console.log('you scroller you');
+//   $('.scrollDown').css({
+//      'text-shadow' : '0 0 25px #fff',
+//      'transform' : 'translate3d(-50%, 10%, 0) scale(1.5)'
+//   })
+//   setTimeout(function() {
+//       $(window).off("scroll", "**")
+//   }, 800)
+// })
 
 
 
@@ -87,7 +142,8 @@ $(function () {
         $("#quotes").css(
           {
             'height' : '100vh',
-            'background-image' : 'url(../img/firstTY-01.jpg)'
+            'background-image' : 'url(../img/firstTY-01.jpg)',
+            'animation' : 'backMover 50s forwards'
           }
         );
         $(".thanksAreSaid").css({

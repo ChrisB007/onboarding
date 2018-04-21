@@ -128,13 +128,13 @@
                                     <div class="col-md-6">
                                         <label>Company Name <span class="punctEmph">:</span></label>
                                         <div>
-                                            <input type="text" name="company" class="col-md-12 col-xs-12" placeholder="Company Name">
+                                            <input type="text" name="company" required class="col-md-12 col-xs-12" placeholder="Company Name">
                                         </div>
                                     </div>
                                     <div>
                                         <div class="col-md-6">
                                             <label>Website <span class="punctEmph">:</span> &nbsp;</label>
-                                            <input type="text" name="adress1" class="col-md-12 col-xs-12" placeholder="http://">
+                                            <input type="text" name="website"  class="col-md-12 col-xs-12" placeholder="http://">
                                         </div>
                                     </div>
                                 </div>
@@ -142,19 +142,19 @@
                                 <div class="row">
                                     <div class="col-md-5">
                                         <label>Main Address <span class="punctEmph">:</span></label>
-                                        <input type="text" name="adress2" placeholder='1233 Broadway' id="form-address" class="col-md-12 form-control">
+                                        <input type="text" name="address" required placeholder='1233 Broadway' id="form-address" class="col-md-12 form-control">
                                     </div>
                                     <div class="col-md-2">
                                         <label>City <span class="punctEmph">:</span></label>
-                                        <input type="text" name="city" id="form-city" class="col-md-12 form-control" placeholder="City">
+                                        <input type="text" name="city" required id="form-city" class="col-md-12 form-control" placeholder="City">
                                     </div>
                                     <div class="col-md-2">
                                         <label>State <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="state" id="form-state" class="col-md-12 form-control" placeholder="State">
+                                        <input type="text" name="state" required id="form-state" class="col-md-12 form-control" placeholder="State">
                                     </div>
                                     <div class="col-md-3">
                                         <label>Zip code <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="zipcode" id="form-zip" class="col-md-12 form-control" placeholder="Zip code">
+                                        <input type="text" name="zipcode" required id="form-zip" class="col-md-12 form-control" placeholder="Zip code">
                                     </div>
                                 </div>
                                 <div class="butt"></div>
@@ -167,31 +167,31 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <label>Your Name <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="firstname_lastname" class="col-md-12 col-xs-12" placeholder="John Doe">
+                                        <input type="text" name="firstname_lastname" required class="col-md-12 col-xs-12" placeholder="John Doe">
                                     </div>
                                     <div class="col-md-4">
                                         <label>Your Email <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="email" size="35" placeholder="me@mycompany.com" class="col-md-12 col-xs-12">
+                                        <input type="text" name="email" size="35" required placeholder="me@mycompany.com" class="col-md-12 col-xs-12">
                                     </div>
                                     <div class="col-md-4">
                                         <label>Your Phone <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="phone" placeholder="123-345-5678" class="col-md-12 col-xs-12">
+                                        <input type="text" name="phone" required placeholder="123-345-5678" class="col-md-12 col-xs-12">
                                     </div>
                                 </div>
                                 <br>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>User ID <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="userid" class="col-md-12 col-xs-12">
+                                        <input type="text" name="userid" required class="col-md-12 col-xs-12">
                                     </div>
 
                                     <div class="col-md-3">
                                         <label>Password <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="password" name="password1" placeholder="******" class="col-md-12 col-xs-12">
+                                        <input type="password" name="password1" required placeholder="******" class="col-md-12 col-xs-12">
                                     </div>
                                     <div class="col-md-3">
                                         <label>Confirm <span class="punctEmph">:</span> </label>
-                                        <input type="password" name="password2" placeholder="******" class="col-md-12 col-xs-12">
+                                        <input type="password" name="password2" required placeholder="******" class="col-md-12 col-xs-12">
                                     </div>
 
                                 </div>
@@ -199,11 +199,11 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Your Brand <span class="punctEmph">:</span> &nbsp;</label>
-                                        <input type="text" name="brand" class="col-md-12 col-xs-12" placeholder="Brand number one ">
+                                        <input type="text" name="brand" required class="col-md-12 col-xs-12" placeholder="Brand number one ">
                                     </div>
                                     <div class="col-md-6">
                                         <label>Your Role <span class="punctEmph">:</span> &nbsp;</label>
-                                        <select id="id_role" name="role" class="col-md-12 col-xs-12">
+                                        <select id="id_role" required name="role" class="col-md-12 col-xs-12">
                                             <option value="">Select a Role</option>
                                             <option value="Brand Manager">Brand Manager</option>
                                             <option value="Executive">Executive</option>
@@ -339,16 +339,30 @@
                             <h3>
                                 <span class="about-2-timeheader" style="margin-top: 3.5em">The Present</span>
                             </h3>
+                            </br><div class="row">
+                                <div class="col-md-3">
+                                   <span>Let's start with your Competitor:</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input name="competitor1" required id="competitor1" class="form-control" type="text"/>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="competitors2" style="display:none">Competitor #2:</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" required class="competitors2 form-control" name="competitor2" style="display:none"/>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label>What data insight / marketing analytic tools are you currently using/have used?</label>
-                                    <textarea rows="6" class="col-md-12 col-xs-12" name="what-data-management"></textarea>
+                                    <textarea rows="6" required class="col-md-12 col-xs-12" name="what-data-management"></textarea>
 
                                 </div>
                                 <div>
                                     <div class="col-md-6">
                                         <label>What are some of the problems/frustrations that you've encountered with these tools?</label>
-                                        <textarea rows="6" class="col-md-12 col-xs-12" name="what-problems"></textarea>
+                                        <textarea rows="6" required class="col-md-12 col-xs-12" name="what-problems"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -358,11 +372,11 @@
                                     <label>What specific features are MUST HAVE for you?
                                         <span style="font-size: smaller">(Please specify)</span>
                                     </label>
-                                    <textarea rows="6" class="col-md-12 col-xs-12" name="what-three-gaps"></textarea>
+                                    <textarea rows="6" required class="col-md-12 col-xs-12" name="what-three-gaps"></textarea>
                                 </div>
                                 <div class="col-md-6">
                                     <label>What features in your current tool have been most useful to you?</label>
-                                    <textarea rows="6" class="col-md-12 col-xs-12" name="what-are-some"></textarea>
+                                    <textarea rows="6" required class="col-md-12 col-xs-12" name="what-are-some"></textarea>
                                 </div>
                             </div>
                             <br>
@@ -443,19 +457,19 @@
 
                         <div class="col-md-6  col-xs-12">
                             <label>What are your expectations about how Quantum will be different?</label>
-                            <textarea rows="6" class="col-md-12 col-xs-12" name="what-are-expectation"></textarea>
+                            <textarea rows="6" required class="col-md-12 col-xs-12" name="what-are-expectation"></textarea>
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <label>What about using Quantum would make you feel most satisfied with the experience?</label>
-                            <textarea rows="6" class="col-md-12 col-xs-12" name="what-about-using"></textarea>
+                            <textarea rows="6" required class="col-md-12 col-xs-12" name="what-about-using"></textarea>
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <label>Do you have any specific campaign(s) you have coming up in the next 3-6 months?</label>
-                            <textarea rows="6" class="col-md-12 col-xs-12" name="are-there-any"></textarea>
+                            <textarea rows="6" required class="col-md-12 col-xs-12" name="are-there-any"></textarea>
                         </div>
                         <div class="col-md-6 col-xs-12">
                             <label>What would success with the campaign look like for you?</label>
-                            <textarea rows="6" class="col-md-12 col-xs-12" name="what-would-success"></textarea>
+                            <textarea rows="6" required class="col-md-12 col-xs-12" name="what-would-success"></textarea>
                         </div>
 
                     </div>

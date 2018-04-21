@@ -116,6 +116,13 @@ $('.close').click(function() {
 
 /*Submit btn*/
 $(function () {
+    $("#competitor1").change(function () {
+        if ($(this).val().length) {
+            $(".competitors2").show();
+        } else {
+            $(".competitors2").hide();
+        }
+    })
         $("#modal-save").click(function () {
             var val = $("#hidden-access").val();
             var form = JSON.stringify($(".modal form").serializeArray());
@@ -158,22 +165,31 @@ $(function () {
         //  });
         e.preventDefault()
         //debugger;//
-        $('html, body').animate({
-            scrollTop: $("#quotes").offset().top
-        }, 2000);
+
         var postStr = "";
+        var invalid = false;
         $("form").each(function () {
+            console.log(this.reportValidity())
+           if(!this.reportValidity()) {
+               invalid = true
+           }
            postStr += $(this).serialize() + "&";
 
         });
         console.log(postStr);
-        var url = 'http://customizethis/';
-        $.post(url, postStr, function (response) {
-          console.log(response);
-        });
-        $(this).attr('disabled', true);
-        $(this).hide('slow');
-        $("#submit-thanks").removeClass('hidden');
+        debugger
+        if (!invalid) {
+            $('html, body').animate({
+                scrollTop: $("#quotes").offset().top
+            }, 2000);
+            var url = 'http://customizethis/';
+            $.post(url, postStr, function (response) {
+                console.log(response);
+            });
+            $(this).attr('disabled', true);
+            $(this).hide('slow');
+            $("#submit-thanks").removeClass('hidden');
+        }
     });
     function isVowel(x) {
 

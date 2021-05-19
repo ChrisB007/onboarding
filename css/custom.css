@@ -920,6 +920,12 @@ legend {
   line-height: 1.5em;
 }
 
+/* logo */
+
+.jdlogo {
+  font-family: 'KoHo', sans-serif;
+}
+
 .highlight {
   color: #293948;
 }
